@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>restsharp_tests_serverest</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="App\Model\Cart\**" />
+    <Compile Remove="Test\Cart\**" />
+    <Compile Remove="Test\NovaPasta\**" />
+    <EmbeddedResource Remove="App\Model\Cart\**" />
+    <EmbeddedResource Remove="Test\Cart\**" />
+    <EmbeddedResource Remove="Test\NovaPasta\**" />
+    <None Remove="App\Model\Cart\**" />
+    <None Remove="Test\Cart\**" />
+    <None Remove="Test\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="NJsonSchema" Version="10.9.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App\Data\Schema\UserListJsonSchema.json">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserListJsonSchema.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
